@@ -1,0 +1,12 @@
+#!/bin/bash
+# System upgrade
+pacman -Syu
+
+
+# Link BlackArch repo and download tools
+curl -O https://blackarch.org/strap.sh
+chmod +x strap.sh
+sudo ./strap.sh
+pacman -S nmap masscan autorecon dirb gobuster wfuzz fuff sqlmap armitage binwalk gdb hydra john hashcat exploit-db dnsrecon evil-winrm wpscan
+
+
