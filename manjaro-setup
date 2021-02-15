@@ -7,6 +7,7 @@ pacman -Syu
 curl -O https://blackarch.org/strap.sh
 chmod +x strap.sh
 sudo ./strap.sh
-pacman -S nmap masscan autorecon dirb gobuster wfuzz fuff sqlmap armitage binwalk gdb hydra john hashcat exploit-db dnsrecon evil-winrm wpscan
+pacman -S nmap masscan wpscan gdb nikto dirb gobuster ffuf dirsearch autopwn autorecon awsbucketdump binwalk cewl checksec cloudsploit commix dnsrecon empire enum4linux evilgrade evil-winrm exploitdb exploit-db fcrackzip john hydra ftp-scanner radare2 ghidra hashcat hashid hex2bin tplmap joomscan kernelpop kerbrute lfi-autopwn linux-exploit-suggester.sh massdns  sqlmapzaproxy php-vulnerability-hunter pwncat nc sherlock smtp-user-enum smbmap stegdetect stegsolve stegoveritas suid3numwafninja wafw00f xsssniper
+
 
 
