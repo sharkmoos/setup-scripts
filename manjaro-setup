@@ -1,4 +1,7 @@
 #!/bin/bash
+# Manually : Setup Burp Pro, ZAP Certs, HUNT for Zap
+
+
 # System upgrade
 pacman -Syu
 
