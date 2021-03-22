@@ -3,9 +3,13 @@
 
 
 # System upgrade
+get_update()
+{
 pacman -Syu
+}
 
 
+get_blackarch()
 # Link BlackArch repo and download tools
 curl -O https://blackarch.org/strap.sh
 chmod +x strap.sh
@@ -15,19 +19,37 @@ pacman -S nmap masscan wpscan gdb nikto dirb gobuster ffuf dirsearch autopwn aut
 
 #Snap
 
-git clone https://aur.archlinux.org/snapd.git
-cd snapd
-makepkg -si
-sudo systemctl enable --now snapd.socket
-sudo ln -s /var/lib/snapd/snap /snap
+#git clone https://aur.archlinux.org/snapd.git
+#cd snapd
+#makepkg -si
+#sudo systemctl enable --now snapd.socket
+#sudo ln -s /var/lib/snapd/snap /snap
 
 # Paru
-
+get_paru()
+{
 sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
+}
 
-# Install Discord, MSTeams & Spotify
-
+# Install programs only needed when running on bare metal
+get_metal_extras()
+{
 paru -S spotify discord teams-insiders
+}
+
+get_nightly_metasploit()
+{
+    paru -S metasploit-git
+}
+get_update
+get_blackarch
+get_paru
+get_nightly_metasploit
+
+if [$metal == 1]
+then
+  get_metal_extras
+fi
