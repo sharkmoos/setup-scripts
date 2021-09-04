@@ -72,8 +72,8 @@ check_priv
 get_update
 install_ohmyzsh
 get_nightly_metasploit
-get_pwndbg
 get_web_tools
 get_pwn_tools
 setup_wordlists
+get_pwndbg
 get_cutter
