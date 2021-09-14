@@ -12,7 +12,7 @@ check_priv()
 
 get_update()
 {
-    apt update && apt full-update
+    apt update && apt full-upgrade
 }
 
 
